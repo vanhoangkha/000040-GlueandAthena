@@ -1,0 +1,50 @@
+[
+{
+	"uri": "/vi/1-prerequiste/",
+	"title": "Các bước khởi đầu",
+	"tags": [],
+	"description": "",
+	"content": "Đây là phần đầu tiên trong quá trình viết Lab Guide.\nBên dưới là phần điều hướng đến các trang con bằng các liên kết nội bộ trỏ đến thư mục con.\nNội dung:\n 1. Cấu hình config.toml 2. Cấu trúc Thư mục  "
+},
+{
+	"uri": "/vi/",
+	"title": "Cách viết một Lab Guide",
+	"tags": [],
+	"description": "",
+	"content": "Cách viết một Lab Guide Đây là cách cơ bản để viết một Lab Guide sử dụng Markdown.\nĐây là hướng dẫn chứ không phải là cách duy nhất để tuân thủ theo. :D Format đã được sư phụ Hưng xem xét và kiểm duyệt sau nhiều lần sửa chữa.\n\rNếu thấy có điểm nào format làm đẹp hơn nhớ đóng góp cho môn phái nhá :DD\n\rCông cụ  Lab guide sử dụng Theme Hugo có thể được cài đặt trên nhiều nền tảng tại đây miễn sao gõ hugo version trong Terminal/CMD/PowerShell chạy được là được. Một IDE nào đó có các plug-ins hỗ trợ các loại ngôn ngữ cho thuận tiện trong việc viết: Visual Studio Code, Atom, Notepad++,\u0026hellip; (Người viết guide này đang xài Visual Studio Code) Các plug-ins theo IDE: Nghiễm nhiên sẽ cần plug-ins dành cho Markdown (như Markdown All in One, Markdown TOC,\u0026hellip;). Mỗi khi viết 1 file ngôn ngữ gì thì VS Code cũng gợi ý cài cái plug-ins liên quan nên không phải lo lắng.  Tài liệu  Tài liệu chính chủ Hugo Documentation Tài liệu cho Hugo Learn Theme (Nói rõ về tổ chức, syntax cho tới shortcode (những thứ được dựng sẵn))  Nội dung Chúng ta sẽ thực hiện theo các bước sau:\n Các bước khởi đầu Viết nội dung  "
+},
+{
+	"uri": "/vi/1-prerequiste/1-config/",
+	"title": "Thay đổi config.toml",
+	"tags": [],
+	"description": "",
+	"content": "Nội dung:\n Cấu hình config.toml  Cấu hình config.toml Đầu tiên khi bắt đầu viết 1 Lab Guide thì sẽ mở tập tin config.toml nằm ở thư mục gốc lên và chỉnh sửa tiêu đề của bài Lab sẽ viết.\n[Languages.en] title = \u0026#34;How to Write a Lab Guide\u0026#34; weight = 1 languageName = \u0026#34;English\u0026#34; [Languages.vi] title = \u0026#34;Cách viết một Lab Guide\u0026#34; weight = 2 languageName = \u0026#34;Tiếng Việt\u0026#34; "
+},
+{
+	"uri": "/vi/1-prerequiste/2-dir-structure/",
+	"title": "Cấu trúc Thư mục",
+	"tags": [],
+	"description": "",
+	"content": "Nội dung:\n Thư mục content Thư mục static/images Thư mục public  Thư mục content Chúng ta tạm quy ước với nhau là sẽ tổ chức bài Lab với 2 cấp độ là tối đa (VD: 1. -\u0026gt; 1.1. tương ứng với 1-prerequiste -\u0026gt; 1-config)\nTrong mỗi thư mục sẽ bao gồm:\n Các thư mục thứ cấp. Tập tin _index.md : Chứa nội dung tiếng Anh. Tập tin _index.vi.md : Chứa nội dung tiếng Việt.  Nếu chỉ đang viết guide tiếng Việt thôi thì sẽ copy _index.vi.md ra một bản nữa và đổi tên thành _index.md nhá. (Để dịch sau)\n\rThư mục static/images Đây sẽ là thư mục chứa ảnh cho Lab Guide. Mọi ảnh đều được bỏ vào trong đây. Có thể phân cấp thư mục cho các ảnh để dễ quản lý ảnh.\nCác ảnh này sẽ được sử dụng trong bài viết bằng thẻ gán ảnh:\n![Đây là tên ảnh (Hiển thị khi không load được ảnh)](../../../images/1/1.png?width=90pc) Kết quả:\nSử dụng ?width=90pc với các ảnh toàn màn hình và ?width=40pc hoặc ?width=50pc đối với các ảnh crop.\n\rThư mục public Đây là thư mục sẽ được tạo ra bởi hugo.\nSau khi viết hoàn chỉnh guide hoặc một phần guide mà muốn kiểm tra hiển thị thì có thể chạy lệnh sau để build project\n$ hugo Sau khi build hoàn thành thì sẽ có thư mục public xuất hiện. Tiến hành chạy server để xem thành quả tại http://localhost:1313\n$ hugo server \rTới đây rồi thì hãy thử xóa thư mục public và chạy thử xem Guide này có hoạt động được không nhá.\n\r"
+},
+{
+	"uri": "/vi/2-write-contents/",
+	"title": "Viết nội dung",
+	"tags": [],
+	"description": "",
+	"content": "Về thứ tự làm một Guide theo kinh nghiệm cá nhân của người viết là như sau:\n Thực hiện bài Hand-on Lab một lần để nắm các bước cần phải làm. (Ghi chú lại những bước lỗi do thiếu (có thể là IAM Role, Permissions,\u0026hellip;)) Lên cấu trúc cho Lab Guide (phân theo từng bước). Đây (có thể) cũng chính là cấu trúc thư mục của bài thực hành. Clean up và thực hiện lại bài Lab lần thứ 2. Lần này quay phim lại (có thể sử dụng Active Presenter) hoặc screenshot từng bước và đánh số thứ tự hình ảnh (có thể dùng SnagIt) Viết phần nội dung text cho Lab Guide. (Để sẵn các placeholder cho hình ảnh) Nếu quay phim thì trích xuất hình ảnh từ video ra (có thể sử dụng VLC Player có mục Screenshot) và đặt hình ảnh vào những vị trí đã xác định. Crop hình ảnh loại bỏ đi khung viền của browser (Nếu sử dụng SnagIt thì xác định vùng chụp cố định bỏ đi khung viền browser) Kiểm tra và format lại nội dung với các Notice, bổ sung các Tập tin đính kèm (nếu có)  Sau đây là một số ghi nhớ khi viết nội dung:\n Phần tiêu đề Phần heading Phần Table of Contents (TOC) Phần ghi chú Phần tập tin đính kèm Phần vẽ bảng Phần hình ảnh  Phần tiêu đề Ở đầu mỗi trang đều có phần header này để hiển thị tiêu đề và xác định điều hướng ở bên Navigation panel bên trái trang.\n title = \u0026quot;Viết nội dung\u0026quot;: Để nội dung ngắn gọn súc tích để vừa 1 dòng ở bên Navigation panel bên trái. chapter = false : Để mặc định là false. Title ở trên cũng sẽ hiển thị là h1 ở trong bài viết. pre = \u0026quot;\u0026lt;b\u0026gt;2. \u0026lt;/b\u0026gt;\u0026quot; : Đây là đánh số cho trang hiển thị ở Navigation panel bên trái.  +++\rtitle = \u0026quot;Viết nội dung\u0026quot;\rdate = 2020\rweight = 2\rchapter = false\rpre = \u0026quot;\u0026lt;b\u0026gt;2. \u0026lt;/b\u0026gt;\u0026quot;\r+++\rPhần heading Chúng ta sẽ thống nhất việc dùng tiêu đề cho các section trong 1 trang sẽ sử dụng h4 (####).\nVí dụ chính là heading của phần này.\nPhần Table of Contents (TOC) Sau khi viết xong nội dung (hoặc liệt kê xong các Heading của 1 trang), chúng ta có thể xây dựng Table of Contents (TOC) tự động bằng plug-in.\nSử dụng tổ hợp phím Ctrl + Shift + P sau đó gõ vào Create Table of Contents rồi chọn lựa chọn của plug-in Markdown All in One. Enter.\nChúng ta sẽ có một cái TOC như sau:\n**Nội dung:** - [Phần tiêu đề](#phần-tiêu-đề) - [Phần heading](#phần-heading) - [Phần Table of Contents (TOC)](#phần-table-of-contents-toc) - [Phần ghi chú](#phần-ghi-chú) - [Phần tập tin đính kèm](#phần-tập-tin-đính-kèm) - [Phần vẽ bảng](#phần-vẽ-bảng) - [Phần hình ảnh](#phần-hình-ảnh) Phần ghi chú Trong bài viết có thể sẽ có các đoạn cần làm nổi bật lên như Ghi chú, Cảnh báo,\u0026hellip; thì sẽ dùng shortcode theo hướng dẫn tại đây\nĐây là Note\n\rĐây là Info\n\rĐây là Tip\n\rĐây là Warning\n\rPhần tập tin đính kèm Phần này sẽ thực hiện theo hướng dẫn tại đây\nVị trí đặt tập tin sẽ là trong thư mục tương ứng với tên trang md.\nVD:\n _index.md \u0026mdash;\u0026gt; _index.files _index.vi.md \u0026mdash;\u0026gt; _index.vi.files  Nghĩa là nếu có nhiều ngôn ngữ thì mỗi ngôn ngữ 1 thư mục như vậy cho 1 trang.\n\rSử dụng shortcode sau để tạo phần đính kèm:\n title : Tiêu đề phần đính kèm pattern : Xác định các tập tin được hiện ra trong box (có thể để tên tập tin hoặc pattern để xác định theo đuôi)  Ví dụ lọc tập tin Dockerfile:\n{{%\u0026lt;attachments title=\u0026quot;Dockerfile\u0026quot; pattern=\u0026quot;Dockerfile\u0026quot;/%}}\rSẽ được như vầy:\n\r\rDockerfile\r\r\rDockerfile\r\r(0 ko)\r\r\r\rVí dụ lọc tập tin theo đuôi:\n{{%attachments title=\u0026quot;Build Scripts\u0026quot; pattern=\u0026quot;.*(ps1|sh)\u0026quot;/%}}\rSẽ được như vầy:\n\r\rBuild Scripts\r\r\rbuild.ps1\r\r(0 ko)\r\r\rbuild.sh\r\r(0 ko)\r\r\r\rPhần vẽ bảng Để đơn giản hóa việc vẽ bảng, người viết thường sử dụng công cụ Tables Generator\n Truy cập tới trang. Nhập nội dung xong bấm Generate rồi Copy to clipboard. Xong vô đây Paste vào thôi.  | Mức độ nghiêm trọng | Thời gian phản hồi lần đầu | Mô tả và gói hỗ trợ áp dụng |\r|:----------------------------------------------------:|:--------------------------:|:---------------------------:|\r| Hướng dẫn Thông thường | 24 giờ | Mô tả |\r| Ảnh hưởng đến hệ thống | 12 giờ | Mô tả |\r| Ảnh hưởng đến hệ thống Production | 4 giờ | Mô tả |\r| Hệ thống Production ngưng hoạt động | 1 giờ | Mô tả |\r| Hệ thống quan trọng của doanh nghiệp ngưng hoạt động | 15 phút | Mô tả |\r   Mức độ nghiêm trọng Thời gian phản hồi lần đầu Mô tả và gói hỗ trợ áp dụng     Hướng dẫn Thông thường 24 giờ Mô tả   Ảnh hưởng đến hệ thống 12 giờ Mô tả   Ảnh hưởng đến hệ thống Production 4 giờ Mô tả   Hệ thống Production ngưng hoạt động 1 giờ Mô tả   Hệ thống quan trọng của doanh nghiệp ngưng hoạt động 15 phút Mô tả    Phần hình ảnh Nội dung này đã được đề cập tại đây\n"
+},
+{
+	"uri": "/vi/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/vi/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
