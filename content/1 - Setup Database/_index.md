@@ -42,7 +42,7 @@ AWS sẽ generate report theo giờ và file nằm trong đường dẫn mà ta 
 ***
 ### Xây dựng Cơ sở dữ liệu
 
-Trở về nội dung chính của bài lab, khi đã có dữ liệu đầu vào với đường dẫn trên S3 như ở đầu bài lab, chúng ta sẽ đi cấu hình **AWS Glue** và **Crawler** để nó chạy theo lịch mỗi ngày 1 lần. **Crawler** sẽ quét đường dẫn chứa file **Parquet** đầu vào, lưu trên S3 rồi thực hiện tạo một database cùng các bảng đi kèm. Khi có một phiên bản mới của report, bảng dữ liệu sẽ được tự động cập nhật.  
+Trở về nội dung chính của bài lab, khi đã có dữ liệu đầu vào với đường dẫn trên S3 như ở đầu bài lab, chúng ta sẽ cấu hình **AWS Glue** và **Crawler** để nó chạy theo lịch mỗi ngày 1 lần. **Crawler** sẽ quét đường dẫn chứa file **Parquet** đầu vào, lưu trên S3 rồi thực hiện tạo một database cùng các bảng đi kèm. Khi có một phiên bản mới của report, bảng dữ liệu sẽ được tự động cập nhật.  
 
 **Amazon Athena** giúp chúng ta truy cập và xem nội dung file **parquet** thông qua mã lệnh **SQL**. **Amazon Athena** là một giải pháp phi máy chủ hỗ trợ thực thi lệnh truy vấn SQL trên lượng lớn dữ liệu. **Athena** chỉ bị tính phi đối với dữ liệu được quét, không giống như giải pháp cơ sở dữ liệu truyền thống.  
 

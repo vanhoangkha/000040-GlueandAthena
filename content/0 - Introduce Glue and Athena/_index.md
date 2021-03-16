@@ -7,11 +7,11 @@ pre = "<b>1. </b>"
 +++
 
 ---
-AWS Glue là dịch vụ chuẩn bị dữ liệu hỗ trợ các nhà phân tích dữ liệu trong việc *trích xuất - biến đổi – đẩy* (**ETL**), tạo điều kiện để trau chuốt, làm phong phú và bình thường hóa dữ liệu. Đồng thời nhờ có AWS Glue, thời gian cần thiết để bắt đầu phân tích dữ liệu có thể giảm từ tháng xuống phút.  
+AWS Glue là dịch vụ chuẩn bị dữ liệu hỗ trợ các nhà phân tích dữ liệu trong việc *trích xuất - biến đổi – đẩy dữ liệu* (**ETL Extract - Transform - Load **), tạo điều kiện để trau chuốt, làm phong phú và chuẩn hóa dữ liệu. Đồng thời nhờ có AWS Glue, thời gian cần thiết để bắt đầu phân tích dữ liệu có thể giảm từ hàng tháng xuống vài phút.  
 
-Để dữ liệu sẵn sàng cho hoạt động phân tích, trước tiên bạn cần trích xuất dữ liệu từ nhiều nguồn (ví dụ *S3*). Sau đó phải trau chuốt, biến đổi dữ liệu thành định dạng yêu cầu (ví dụ *Parquet*), đẩy dữ liệu vào cơ sở dữ liệu, kho dữ liệu và hồ dữ liệu cho quá trình phân tích sau này. Những công việc này thường được thực hiện bởi nhiều nhóm nhân lực với nhiều công cụ.  
+Để dữ liệu sẵn sàng cho hoạt động phân tích, trước tiên bạn cần trích xuất dữ liệu từ nhiều nguồn (ví dụ *S3*). Sau đó phải trau chuốt, biến đổi dữ liệu thành định dạng yêu cầu (ví dụ *Parquet*), đẩy dữ liệu vào cơ sở dữ liệu, kho dữ liệu và hồ dữ liệu cho quá trình phân tích sau này. Những công việc này thường được thực hiện bởi nhiều nhóm nhân lực với nhiều công cụ đa dạng khác nhau.  
 
-**AWS Glue** cho phép thao tác cả ở dạng mã lệnh và dạng giao diện giúp người dùng thuận tiện trong việc chuẩn bị dữ liệu. Các nhà phân tích dữ liệu có thể dễ dàng khởi tạo, chạy và theo dõi quy trình *ETL* với **AWS Glue Studio**. Ngoài ra còn có **AWS Glue DataBrew** giúp trau chuốt và bình thường hóa dữ liệu một cách trực quan mà không cần phải viết mã.  
+**AWS Glue** cho phép thao tác cả ở dạng mã lệnh và dạng giao diện giúp người dùng thuận tiện trong việc chuẩn bị dữ liệu. Các nhà phân tích dữ liệu có thể dễ dàng khởi tạo, chạy và theo dõi quy trình *ETL* với **AWS Glue Studio**. Ngoài ra còn có **AWS Glue DataBrew** giúp trau chuốt và chuẩn hóa dữ liệu một cách trực quan mà không cần phải viết mã.  
 
 Bên dưới là sơ đồ hoạt động cơ bản với sự kết hợp giữa **AWS Glue** và **Amazon Athena**
 

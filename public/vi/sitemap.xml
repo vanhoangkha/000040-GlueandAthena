@@ -3,21 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/vi/1-prerequiste/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/1-prerequiste/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/1-prerequiste/"
-                />
-  </url>
-  
-  <url>
     <loc>/vi/</loc>
     <lastmod>1970-01-01T07:33:40+07:00</lastmod>
     <xhtml:link
@@ -33,47 +18,62 @@
   </url>
   
   <url>
-    <loc>/vi/1-prerequiste/1-config/</loc>
+    <loc>/vi/0-introduce-glue-and-athena/</loc>
     <lastmod>1970-01-01T07:33:40+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/1-prerequiste/1-config/"
+                href="/0-introduce-glue-and-athena/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/1-prerequiste/1-config/"
+                href="/vi/0-introduce-glue-and-athena/"
                 />
   </url>
   
   <url>
-    <loc>/vi/1-prerequiste/2-dir-structure/</loc>
+    <loc>/vi/1-setup-database/</loc>
     <lastmod>1970-01-01T07:33:40+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/1-prerequiste/2-dir-structure/"
+                href="/1-setup-database/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/1-prerequiste/2-dir-structure/"
+                href="/vi/1-setup-database/"
                 />
   </url>
   
   <url>
-    <loc>/vi/2-write-contents/</loc>
+    <loc>/vi/2-analyze-cost-and-usage/</loc>
     <lastmod>1970-01-01T07:33:40+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-write-contents/"
+                href="/2-analyze-cost-and-usage/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-write-contents/"
+                href="/vi/2-analyze-cost-and-usage/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/3-sql-query-for-cur/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-sql-query-for-cur/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-sql-query-for-cur/"
                 />
   </url>
   

@@ -11,7 +11,7 @@ Bài lab sẽ hướng dẫn bạn từng bước để thiết lập một nề
 
 #### Tài liệu
 
-1. Tài liệu nguồn chính thức [Cost and Usage Analysis](https://www.wellarchitectedlabs.com/cost/200_labs/200_4_cost_and_usage_analysis/)
+1. Tài liệu nguồn [Cost and Usage Analysis](https://www.wellarchitectedlabs.com/cost/200_labs/200_4_cost_and_usage_analysis/)
 2. Tài liệu tham khảo [What is Amazon Athena?](https://aws.amazon.com/vi/athena) 
 3. Tài liệu tham khảo [What is AWS Glue](https://aws.amazon.com/vi/glue)
 
@@ -20,9 +20,9 @@ Bài lab sẽ hướng dẫn bạn từng bước để thiết lập một nề
 
 Nội dung bài lab gồm 3 phần:
 
-1. [Giới thiệu AWS Glue & Amazon Athena](http://localhost:1313/0-introduce-glue-and-athena/)
-2. [Chuẩn bị Cơ sở dữ liệu](http://localhost:1313/1-setup-database/)
-3. [Phân tích Chi phí và Hiệu năng Sử dụng](http://localhost:1313/2-analyze-cost-and-usage/)
+1. [Giới thiệu AWS Glue & Amazon Athena](0-introduce-glue-and-athena/)
+2. [Chuẩn bị Cơ sở dữ liệu](1-setup-database/)
+3. [Phân tích Chi phí và Hiệu năng Sử dụng](2-analyze-cost-and-usage/)
 
 
 #### Chuẩn bị  
