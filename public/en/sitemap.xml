@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -15,69 +13,139 @@
                 hreflang="en"
                 href="/"
                 />
-  </url>
-  
-  <url>
-    <loc>/0-introduce-glue-and-athena/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+  </url><url>
+    <loc>/3-costandusageanalysis/3.1-datainthetable/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/0-introduce-glue-and-athena/"
+                href="/vi/3-costandusageanalysis/3.1-datainthetable/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/0-introduce-glue-and-athena/"
+                href="/3-costandusageanalysis/3.1-datainthetable/"
                 />
-  </url>
-  
-  <url>
-    <loc>/1-setup-database/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+  </url><url>
+    <loc>/1-introduce/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/1-setup-database/"
+                href="/vi/1-introduce/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/1-setup-database/"
+                href="/1-introduce/"
                 />
-  </url>
-  
-  <url>
-    <loc>/2-analyze-cost-and-usage/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+  </url><url>
+    <loc>/2-prerequiste/2.1-preparedatabase/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-analyze-cost-and-usage/"
+                href="/vi/2-prerequiste/2.1-preparedatabase/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-analyze-cost-and-usage/"
+                href="/2-prerequiste/2.1-preparedatabase/"
                 />
-  </url>
-  
-  <url>
-    <loc>/3-sql-query-for-cur/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+  </url><url>
+    <loc>/2-prerequiste/2.2-builddatabase/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-sql-query-for-cur/"
+                href="/vi/2-prerequiste/2.2-builddatabase/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-sql-query-for-cur/"
+                href="/2-prerequiste/2.2-builddatabase/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/3-costandusageanalysis/3.2-cost/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-costandusageanalysis/3.2-cost/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-costandusageanalysis/3.2-cost/"
+                />
+  </url><url>
+    <loc>/2-prerequiste/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-prerequiste/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-prerequiste/"
+                />
+  </url><url>
+    <loc>/3-costandusageanalysis/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-costandusageanalysis/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-costandusageanalysis/"
+                />
+  </url><url>
+    <loc>/2-prerequiste/2.3-testdatabase/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-prerequiste/2.3-testdatabase/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-prerequiste/2.3-testdatabase/"
+                />
+  </url><url>
+    <loc>/3-costandusageanalysis/3.3-taggingandcost/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-costandusageanalysis/3.3-taggingandcost/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-costandusageanalysis/3.3-taggingandcost/"
+                />
+  </url><url>
+    <loc>/4-cleanup/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-cleanup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-cleanup/"
+                />
+  </url><url>
+    <loc>/3-costandusageanalysis/3.4-usage/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-costandusageanalysis/3.4-usage/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-costandusageanalysis/3.4-usage/"
+                />
+  </url><url>
     <loc>/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -89,9 +157,7 @@
                 hreflang="en"
                 href="/categories/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -104,5 +170,4 @@
                 href="/tags/"
                 />
   </url>
-  
 </urlset>

@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="generator" content="Hugo 0.97.3" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Categories :: COST AND USAGE ANALYSIS</title>
+    <title>Categories :: Cost and Performance Analysis with AWS Glue and Amazon Athena</title>
 
     
-    <link href="/css/nucleus.css?1615906556" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1615906556" rel="stylesheet">
-    <link href="/css/hybrid.css?1615906556" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1615906556" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1615906556" rel="stylesheet">
-    <link href="/css/auto-complete.css?1615906556" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1615906556" rel="stylesheet">
-    <link href="/css/theme.css?1615906556" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1615906556" rel="stylesheet">
+    <link href="/css/nucleus.css?1652979076" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1652979076" rel="stylesheet">
+    <link href="/css/hybrid.css?1652979076" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1652979076" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1652979076" rel="stylesheet">
+    <link href="/css/auto-complete.css?1652979076" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1652979076" rel="stylesheet">
+    <link href="/css/theme.css?1652979076" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1652979076" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1615906556" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1652979076" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1615906556"></script>
+    <script src="/js/jquery-3.3.1.min.js?1652979076"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1615906556"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1615906556"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1652979076"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1652979076"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1615906556"></script>
+<script type="text/javascript" src="/js/search.js?1652979076"></script>
 
     
   </div>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/0-introduce-glue-and-athena/" title="Giới thiệu AWS Glue &amp; Amazon Athena" class="dd-item 
+    <li data-nav-id="/1-introduce/" title="Introducing AWS Glue &amp; Amazon Athena" class="dd-item 
         
         
         
         ">
-      <a href="/0-introduce-glue-and-athena/">
-          <b>1. </b>Giới thiệu AWS Glue &amp; Amazon Athena
+      <a href="/1-introduce/">
+           <b> 1. </b> Introducing AWS Glue &amp; Amazon Athena
           
             <i class="fas fa-check read-icon"></i>
           
@@ -108,18 +108,114 @@
  
   
     
-    <li data-nav-id="/1-setup-database/" title="Chuẩn bị Cơ sở dữ liệu" class="dd-item 
+    <li data-nav-id="/2-prerequiste/" title="Preparation" class="dd-item 
         
         
         
         ">
-      <a href="/1-setup-database/">
-          <b>2. </b>Chuẩn bị Cơ sở dữ liệu
+      <a href="/2-prerequiste/">
+           <b> 2. </b> Preparation
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.1-preparedatabase/" title="Preparing the database" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-prerequiste/2.1-preparedatabase/">
+           <b> 2.1 </b> Preparing the database
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.2-builddatabase/" title="Building Database" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-prerequiste/2.2-builddatabase/">
+           <b> 2.2 </b> Building Database
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.3-testdatabase/" title="Database Check" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-prerequiste/2.3-testdatabase/">
+           <b> 2.3 </b> Database Check
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -134,18 +230,142 @@
  
   
     
-    <li data-nav-id="/2-analyze-cost-and-usage/" title="Phân tích Chi phí và Hiệu năng Sử dụng" class="dd-item 
+    <li data-nav-id="/3-costandusageanalysis/" title="Analysis of cost and usage performance" class="dd-item 
         
         
         
         ">
-      <a href="/2-analyze-cost-and-usage/">
-          <b>3. </b>Phân tích Chi phí và Hiệu năng Sử dụng
+      <a href="/3-costandusageanalysis/">
+           <b> 3. </b> Analysis of cost and usage performance
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-costandusageanalysis/3.1-datainthetable/" title="Data in the Table" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-costandusageanalysis/3.1-datainthetable/">
+           <b> 3.1 </b> Data in the Table
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-costandusageanalysis/3.2-cost/" title="Cost" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-costandusageanalysis/3.2-cost/">
+           <b> 3.2 </b> Cost
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-costandusageanalysis/3.3-taggingandcost/" title="Tagging and Cost Allocation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-costandusageanalysis/3.3-taggingandcost/">
+           <b> 3.3 </b> Tagging and Cost Allocation
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-costandusageanalysis/3.4-usage/" title="Usage" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-costandusageanalysis/3.4-usage/">
+           <b> 3.4 </b> Usage
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -160,13 +380,13 @@
  
   
     
-    <li data-nav-id="/3-sql-query-for-cur/" title="Tham khảo: SQL Query" class="dd-item 
+    <li data-nav-id="/4-cleanup/" title="Clean up resources" class="dd-item 
         
         
         
         ">
-      <a href="/3-sql-query-for-cur/">
-          <b>4. </b>Tham khảo: SQL Query
+      <a href="/4-cleanup/">
+           <b> 4. </b> Clean up resources
           
             <i class="fas fa-check read-icon"></i>
           
@@ -188,11 +408,7 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="http://awsstudygroup.com"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://www.facebook.com/groups/660548818043427/"><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a>
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj/"><i class='fab fa-facebook'></i> AWS Study Group</a>
               </li>
           
         </ul>
@@ -259,12 +475,27 @@
     <section id="footer">
       <left>
     
-    
-
-    
-
-    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
 </left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>18-05-2022</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i> <br>
+                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
+        </i>
+        </left>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
@@ -302,7 +533,7 @@
             
           
           
-            <a href='/'>COST AND USAGE ANALYSIS</a> > Categories
+            <a href='/'>Cost and Performance Analysis with AWS Glue and Amazon Athena</a> > Categories
           
         
           
@@ -328,6 +559,8 @@
         <div id="body-inner">
           
             <h1>
+              
+                taxonomy ::
               
               Categories
             </h1>
@@ -403,6 +636,103 @@
 
                     
                     
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                     
 
                     
@@ -443,6 +773,25 @@
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
         
         
 
@@ -451,7 +800,7 @@
 	 
 		
 		
-			<a class="nav nav-next" href="/0-introduce-glue-and-athena/" title="Giới thiệu AWS Glue &amp; Amazon Athena" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/1-introduce/" title="Introducing AWS Glue &amp; Amazon Athena" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -461,19 +810,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1615906556"></script>
-    <script src="/js/perfect-scrollbar.min.js?1615906556"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1615906556"></script>
-    <script src="/js/jquery.sticky.js?1615906556"></script>
-    <script src="/js/featherlight.min.js?1615906556"></script>
-    <script src="/js/highlight.pack.js?1615906556"></script>
+    <script src="/js/clipboard.min.js?1652979076"></script>
+    <script src="/js/perfect-scrollbar.min.js?1652979076"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1652979076"></script>
+    <script src="/js/jquery.sticky.js?1652979076"></script>
+    <script src="/js/featherlight.min.js?1652979076"></script>
+    <script src="/js/highlight.pack.js?1652979076"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1615906556"></script>
-    <script src="/js/learn.js?1615906556"></script>
-    <script src="/js/hugo-learn.js?1615906556"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1652979076"></script>
+    <script src="/js/learn.js?1652979076"></script>
+    <script src="/js/hugo-learn.js?1652979076"></script>
 
-    <link href="/mermaid/mermaid.css?1615906556" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1615906556"></script>
+    <link href="/mermaid/mermaid.css?1652979076" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1652979076"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
