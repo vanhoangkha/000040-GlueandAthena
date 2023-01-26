@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.97.3" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Building Database :: Cost and Performance Analysis with AWS Glue and Amazon Athena</title>
+    <title>Building a database :: Cost and Performance Analysis with AWS Glue and Amazon Athena</title>
 
     
-    <link href="/css/nucleus.css?1653607333" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1653607333" rel="stylesheet">
-    <link href="/css/hybrid.css?1653607333" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1653607333" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1653607333" rel="stylesheet">
-    <link href="/css/auto-complete.css?1653607333" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1653607333" rel="stylesheet">
-    <link href="/css/theme.css?1653607333" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1653607333" rel="stylesheet">
+    <link href="/css/nucleus.css?1674724618" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1674724618" rel="stylesheet">
+    <link href="/css/hybrid.css?1674724618" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1674724618" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1674724618" rel="stylesheet">
+    <link href="/css/auto-complete.css?1674724618" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1674724618" rel="stylesheet">
+    <link href="/css/theme.css?1674724618" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1674724618" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1653607333" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1674724618" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1653607333"></script>
+    <script src="/js/jquery-3.3.1.min.js?1674724618"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1653607333"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1653607333"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1674724618"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1674724618"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1653607333"></script>
+<script type="text/javascript" src="/js/search.js?1674724618"></script>
 
     
   </div>
@@ -167,13 +167,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.2-builddatabase/" title="Building Database" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.2-builddatabase/" title="Building a database" class="dd-item 
         parent
         active
         
         ">
       <a href="/2-prerequiste/2.2-builddatabase/">
-           <b> 2.2 </b> Building Database
+           <b> 2.2 </b> Building a database
           
             <i class="fas fa-check read-icon"></i>
           
@@ -485,7 +485,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>18-05-2022</font></i>
+        <i><font color=orange>26-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -537,7 +537,7 @@
             
           
           
-            <a href='/'>Cost and Performance Analysis with AWS Glue and Amazon Athena</a> > <a href='/2-prerequiste/'>Preparation</a> > Building Database
+            <a href='/'>Cost and Performance Analysis with AWS Glue and Amazon Athena</a> > <a href='/2-prerequiste/'>Preparation</a> > Building a database
           
         
           
@@ -566,7 +566,7 @@
           
             <h1>
               
-              Building Database
+              Building a database
             </h1>
           
 
@@ -574,133 +574,116 @@
 
 
 
-	<p>In the lab, once we have the input data with the path on S3 as at the beginning of the lab, we will configure <strong>AWS Glue</strong> and <strong>Crawler</strong> so that it runs on a schedule <strong>once a day.</strong>. <strong>Crawler</strong> will scan the path containing the input <strong>Parquet</strong> file, save it on S3 and then create a database with accompanying tables. When a new version of <strong>report</strong> is available, the data table is automatically updated.</p>
+	<p>In the lab, once we have the input data with the above path as at the beginning of the lab, we will configure <strong>AWS Glue</strong> and <strong>Crawler</strong> so that it runs on a schedule *<em>once a day</em> *. <strong>Crawler</strong> will scan the path containing the input <strong>Parquet</strong> file, save it on S3 and then create a database with accompanying tables. When a new version of <strong>report</strong> is available, the data sheet is automatically updated.</p>
 <p><strong>Amazon Athena</strong> helps us access and view parquet file contents through <strong>SQL code</strong>. <strong>Amazon Athena</strong> is a <strong>serverless</strong> solution that supports executing <strong>SQL queries</strong> on large amounts of data. <strong>Athena</strong> is charged only for scanned data, unlike a traditional database solution.</p>
 <p>The detailed configuration steps for <strong>Amazon Athena</strong> to access data files through <strong>AWS Glue</strong> are as follows:</p>
 <ol>
-<li>Go to <a href="https://aws.amazon.com/en/console/">AWS Management Console</a></li>
-</ol>
+<li>
+<p>Go to <a href="https://aws.amazon.com/en/console/">AWS Management Console</a></p>
 <ul>
 <li>Find <strong>AWS Glue</strong></li>
 <li>Select <strong>AWS Glue</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/0001-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
-<ol>
-<li>In the <strong>AWS Glue</strong> interface</li>
+</li>
 </ol>
+<p><img src="/images/2-Prerequiste/2.2-Builddatabase/0001-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<ol start="2">
+<li>
+<p>In the <strong>AWS Glue</strong> interface</p>
 <ul>
 <li>Select <strong>Crawlers</strong></li>
+<li>Select <strong>Create crawler</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/0002-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+</li>
+</ol>
+<p><img src="/images/2/0001.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="3">
-<li>In the <strong>Crawler</strong> interface</li>
+<li>Configure <strong>Crawler</strong>, enter <strong>Name</strong> as <strong><code>Cost_MasterCrawler</code></strong>. Then select <strong>Next</strong></li>
 </ol>
-<ul>
-<li>Select <strong>Add crawler</strong></li>
-</ul>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/0003-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/0002.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="4">
-<li>We perform the <strong>crawler</strong> configuration steps</li>
+<li>Select <strong>Add a data source</strong></li>
 </ol>
-<ul>
-<li>In the <strong>Crawler info</strong> section, enter <strong>Crawler name</strong> as <code>Cost_MasterCrawler</code></li>
-</ul>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/0004-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/0003.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="5">
-<li><strong>Crawler source type</strong> configuration step</li>
+<li>Configure data source</li>
 </ol>
-<ul>
-<li>Select <strong>Data stores</strong></li>
-<li>Select <strong>Crawl new folders only</strong></li>
-<li>Select <strong>Next</strong></li>
-</ul>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/0005-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/0004.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="6">
-<li>In the <strong>Data store</strong> interface</li>
+<li>Select <strong>S3 path</strong></li>
 </ol>
-<ul>
-<li><strong>Choose a data store</strong>, enter <strong>S3</strong></li>
-<li><strong>Crawl data in</strong>, select <strong>Specified path in my account</strong></li>
-<li><strong>Include path</strong>, Select <strong>path of S3</strong></li>
-</ul>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/0006-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/0005.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="7">
-<li>Specify the file formats that will not be crawled in the <strong>exclude patterns</strong> section. Including file types <strong>.json</strong>, <strong>.yml</strong>, <strong>.sql</strong>, <strong>.csv</strong>, <strong>.gz</strong>, <strong>.zip</strong></li>
+<li>Complete the data source configuration.</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/0007-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/0006.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="8">
-<li>Select <strong>No</strong> and select <strong>Next</strong></li>
+<li>After configuring the data source, select <strong>Next</strong></li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/0008-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/0007.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="9">
-<li>In the <strong>IAM Role</strong> section</li>
+<li>For security, select <strong>Create new IAM role</strong></li>
 </ol>
-<ul>
-<li>Select <strong>Create an IAM role</strong></li>
-<li>Enter <code>cost_MasterCrawler</code></li>
-<li>Select <strong>Next</strong></li>
-</ul>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/0009-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/0008.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="10">
-<li>In the <strong>Schedule</strong> section</li>
+<li>Enter the role name and select <strong>Create</strong></li>
 </ol>
-<ul>
-<li><strong>Frequency</strong>, select <strong>Run on demand</strong></li>
-<li>Select <strong>Next</strong></li>
-</ul>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/00010-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/0009.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="11">
-<li><strong>Output</strong> configuration step</li>
+<li>After creating the role, select <strong>Next</strong></li>
+</ol>
+<p><img src="/images/2/00010.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<ol start="12">
+<li>Implement more database</li>
 </ol>
 <ul>
 <li>Select <strong>Add database</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/00011-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
-<ol start="12">
-<li>In the <strong>Add database</strong> interface</li>
-</ol>
-<ul>
-<li><strong>Database name</strong>, enter <code>costmaster</code></li>
-<li>Select <strong>Create</strong></li>
-</ul>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/00012-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/00011.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="13">
-<li>Select <strong>Next</strong></li>
+<li>Enter the database name as <strong><code>costmaster</code></strong>. Select <strong>Create database</strong></li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/00013-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/00012.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="14">
-<li>Double check and select <strong>Finish</strong></li>
+<li>Complete database creation.</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/00014-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/00013.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="15">
-<li>Finish creating <strong>Crawler</strong></li>
+<li>Add database successfully and select <strong>Next</strong></li>
 </ol>
-<ul>
-<li>Select <strong>Cost_MasterCrawler</strong> just created</li>
-<li>Select <strong>Run crawler</strong></li>
-</ul>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/00015-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/00014.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<ol start="14">
+<li>Check and select <strong>Create crawler</strong></li>
+</ol>
+<p><img src="/images/2/00015.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<ol start="15">
+<li>Complete crawler creation.</li>
+</ol>
+<p><img src="/images/2/00016.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="16">
-<li>Crawler runs for about 5 minutes, results appear as shown with <strong>1 Table</strong> added</li>
+<li>Select <strong>Run crawler</strong></li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/00016-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/00017.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="17">
-<li>In the <strong>AWS Glue</strong> interface</li>
+<li>It takes about 1 minute to initialize the run crawler.</li>
 </ol>
-<ul>
-<li>Select <strong>Databases</strong></li>
-<li>Select <strong>costmaster</strong> database</li>
-<li>Select <strong>View tables</strong></li>
-</ul>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/00017-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/00018.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="18">
-<li>Select <strong>monthly_report</strong> table</li>
+<li>Initialize <strong>run crawler</strong></li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/00018-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/00019.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="19">
-<li>It is easy to see that the <strong>record count value is different from 0</strong>, which proves that <strong>parquet data on S3</strong> has been successfully converted to tabular form by AWS Glue <strong>Crawler tool</strong>.</li>
+<li><strong>Run crawler</strong> successfully.</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/00019-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/00020.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<ol start="20">
+<li>Check out the AWS Glue <strong>Table</strong>. We see a data table <strong>monthly_report</strong></li>
+</ol>
+<p><img src="/images/2/00021.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<ol start="21">
+<li>View detailed data sheet information.</li>
+</ol>
+<p><img src="/images/2/00022.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 
 
 
@@ -949,19 +932,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1653607333"></script>
-    <script src="/js/perfect-scrollbar.min.js?1653607333"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1653607333"></script>
-    <script src="/js/jquery.sticky.js?1653607333"></script>
-    <script src="/js/featherlight.min.js?1653607333"></script>
-    <script src="/js/highlight.pack.js?1653607333"></script>
+    <script src="/js/clipboard.min.js?1674724618"></script>
+    <script src="/js/perfect-scrollbar.min.js?1674724618"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1674724618"></script>
+    <script src="/js/jquery.sticky.js?1674724618"></script>
+    <script src="/js/featherlight.min.js?1674724618"></script>
+    <script src="/js/highlight.pack.js?1674724618"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1653607333"></script>
-    <script src="/js/learn.js?1653607333"></script>
-    <script src="/js/hugo-learn.js?1653607333"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1674724618"></script>
+    <script src="/js/learn.js?1674724618"></script>
+    <script src="/js/hugo-learn.js?1674724618"></script>
 
-    <link href="/mermaid/mermaid.css?1653607333" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1653607333"></script>
+    <link href="/mermaid/mermaid.css?1674724618" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1674724618"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.97.3" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Xây dựng cơ sở dữ liệu :: Phân tích chi phí và hiệu năng sử dụng với AWS Glue và Amazon Athena</title>
 
     
-    <link href="/css/nucleus.css?1653607333" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1653607333" rel="stylesheet">
-    <link href="/css/hybrid.css?1653607333" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1653607333" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1653607333" rel="stylesheet">
-    <link href="/css/auto-complete.css?1653607333" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1653607333" rel="stylesheet">
-    <link href="/css/theme.css?1653607333" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1653607333" rel="stylesheet">
+    <link href="/css/nucleus.css?1674724618" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1674724618" rel="stylesheet">
+    <link href="/css/hybrid.css?1674724618" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1674724618" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1674724618" rel="stylesheet">
+    <link href="/css/auto-complete.css?1674724618" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1674724618" rel="stylesheet">
+    <link href="/css/theme.css?1674724618" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1674724618" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1653607333" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1674724618" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1653607333"></script>
+    <script src="/js/jquery-3.3.1.min.js?1674724618"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1653607333"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1653607333"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1674724618"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1674724618"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1653607333"></script>
+<script type="text/javascript" src="/js/search.js?1674724618"></script>
 
     
   </div>
@@ -485,7 +485,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>18-05-2022</font></i>
+        <i><font color=orange>26-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -574,133 +574,116 @@
 
 
 
-	<p>Trong bài lab, khi đã có dữ liệu đầu vào với đường dẫn trên S3 như ở đầu bài lab, chúng ta sẽ cấu hình <strong>AWS Glue</strong> và <strong>Crawler</strong> để nó chạy theo lịch <strong>mỗi ngày 1 lần</strong>. <strong>Crawler</strong> sẽ quét đường dẫn chứa <strong>file Parquet</strong> đầu vào, lưu trên S3 rồi thực hiện tạo một database cùng các bảng đi kèm. Khi có một phiên bản mới của <strong>report</strong>, bảng dữ liệu sẽ được tự động cập nhật.</p>
+	<p>Trong bài lab, khi đã có dữ liệu đầu vào với đường dẫn trên   như ở đầu bài lab, chúng ta sẽ cấu hình <strong>AWS Glue</strong> và <strong>Crawler</strong> để nó chạy theo lịch <strong>mỗi ngày 1 lần</strong>. <strong>Crawler</strong> sẽ quét đường dẫn chứa <strong>file Parquet</strong> đầu vào, lưu trên S3 rồi thực hiện tạo một database cùng các bảng đi kèm. Khi có một phiên bản mới của <strong>report</strong>, bảng dữ liệu sẽ được tự động cập nhật.</p>
 <p><strong>Amazon Athena</strong> giúp chúng ta truy cập và xem nội dung file parquet thông qua <strong>mã lệnh SQL</strong>. <strong>Amazon Athena</strong> là một giải pháp <strong>phi máy chủ</strong> hỗ trợ thực thi lệnh <strong>truy vấn SQL</strong> trên lượng lớn dữ liệu. <strong>Athena</strong> chỉ bị tính phi đối với dữ liệu được quét, không giống như giải pháp cơ sở dữ liệu truyền thống.</p>
 <p>Các bước cấu hình chi tiết để <strong>Amazon Athena</strong> có thể truy cập file dữ liệu thông qua <strong>AWS Glue</strong> như sau:</p>
 <ol>
-<li>Truy cập vào <a href="https://aws.amazon.com/vi/console/">AWS Management Console</a></li>
-</ol>
+<li>
+<p>Truy cập vào <a href="https://aws.amazon.com/vi/console/">AWS Management Console</a></p>
 <ul>
 <li>Tìm <strong>AWS Glue</strong></li>
 <li>Chọn <strong>AWS Glue</strong></li>
 </ul>
+</li>
+</ol>
 <p><img src="/images/2-Prerequiste/2.2-Builddatabase/0001-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="2">
-<li>Trong giao diện <strong>AWS Glue</strong></li>
-</ol>
+<li>
+<p>Trong giao diện <strong>AWS Glue</strong></p>
 <ul>
 <li>Chọn <strong>Crawlers</strong></li>
+<li>Chọn <strong>Create crawler</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/0002-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+</li>
+</ol>
+<p><img src="/images/2/0001.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="3">
-<li>Trong giao diện <strong>Crawler</strong></li>
+<li>Cấu hình <strong>Crawler</strong>, nhập <strong>Name</strong> là <strong><code>Cost_MasterCrawler</code></strong>. Sau đó, chọn <strong>Next</strong></li>
 </ol>
-<ul>
-<li>Chọn <strong>Add crawler</strong></li>
-</ul>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/0003-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/0002.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="4">
-<li>Chúng ta thực hiện các bước cấu hình <strong>crawler</strong></li>
+<li>Chọn  <strong>Add a data source</strong></li>
 </ol>
-<ul>
-<li>Phần <strong>Crawler info</strong>, nhập <strong>Crawler name</strong> là <code>Cost_MasterCrawler</code></li>
-</ul>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/0004-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/0003.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="5">
-<li>Bước cấu hình <strong>Crawler source type</strong></li>
+<li>Cấu hình data source</li>
 </ol>
-<ul>
-<li>Chọn <strong>Data stores</strong></li>
-<li>Chọn <strong>Crawl new folders only</strong></li>
-<li>Chọn <strong>Next</strong></li>
-</ul>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/0005-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/0004.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="6">
-<li>Trong giao diện <strong>Data store</strong></li>
+<li>Chọn <strong>S3 path</strong></li>
 </ol>
-<ul>
-<li><strong>Chooose a data store</strong>, nhập <strong>S3</strong></li>
-<li><strong>Crawl data in</strong>, chọn <strong>Specified path in my account</strong></li>
-<li><strong>Include path</strong>, Chọn <strong>đường dẫn của S3</strong></li>
-</ul>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/0006-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/0005.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="7">
-<li>Chỉ rõ những định dạng file sẽ không được crawl trong <strong>phần exclude patterns</strong>. Bao gồm những dạng file <strong>.json</strong>, <strong>.yml</strong>, <strong>.sql</strong>, <strong>.csv</strong>, <strong>.gz</strong>, <strong>.zip</strong></li>
+<li>Hoàn tất cấu hình data source.</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/0007-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/0006.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="8">
-<li>Chọn <strong>No</strong> và chọn <strong>Next</strong></li>
+<li>Sau khi cấu hình data source, chọn <strong>Next</strong></li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/0008-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/0007.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="9">
-<li>Trong phần <strong>IAM Role</strong></li>
+<li>Đối với security, bạn chọn <strong>Create new IAM role</strong></li>
 </ol>
-<ul>
-<li>Chọn <strong>Create an IAM role</strong></li>
-<li>Nhập <code>cost_MasterCrawler</code></li>
-<li>Chọn <strong>Next</strong></li>
-</ul>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/0009-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/0008.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="10">
-<li>Trong phần <strong>Schedule</strong></li>
+<li>Nhập tên role và chọn <strong>Create</strong></li>
 </ol>
-<ul>
-<li><strong>Frequency</strong>, chọn <strong>Run on demand</strong></li>
-<li>Chọn <strong>Next</strong></li>
-</ul>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/00010-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/0009.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="11">
-<li>Bước cấu hình <strong>Output</strong></li>
+<li>Sau khi tạo role, chọn <strong>Next</strong></li>
+</ol>
+<p><img src="/images/2/00010.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<ol start="12">
+<li>Thực hiện thêm database</li>
 </ol>
 <ul>
 <li>Chọn <strong>Add database</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/00011-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
-<ol start="12">
-<li>Trong giao diện <strong>Add database</strong></li>
-</ol>
-<ul>
-<li><strong>Database name</strong>, nhập <code>costmaster</code></li>
-<li>Chọn <strong>Create</strong></li>
-</ul>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/00012-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/00011.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="13">
-<li>Chọn <strong>Next</strong></li>
+<li>Nhập tên database là <strong><code>costmaster</code></strong>. Chọn <strong>Create database</strong></li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/00013-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/00012.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="14">
-<li>Kiểm tra lại và chọn <strong>Finish</strong></li>
+<li>Hoàn thành tạo database.</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/00014-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/00013.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="15">
-<li>Hoàn thành tạo <strong>Crawler</strong></li>
+<li>Thêm database thành công và chọn <strong>Next</strong></li>
 </ol>
-<ul>
-<li>Chọn <strong>Cost_MasterCrawler</strong> vừa tạo</li>
-<li>Chọn <strong>Run crawler</strong></li>
-</ul>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/00015-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/00014.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<ol start="14">
+<li>Kiểm tra và chọn <strong>Create crawler</strong></li>
+</ol>
+<p><img src="/images/2/00015.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<ol start="15">
+<li>Hoàn thành tạo crawler.</li>
+</ol>
+<p><img src="/images/2/00016.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="16">
-<li>Crawler chạy trong khoảng 5 phút sau, kết quả xuất hiện như hình có <strong>1 Table</strong> được thêm vào</li>
+<li>Chọn <strong>Run crawler</strong></li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/00016-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/00017.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="17">
-<li>Trong giao diện <strong>AWS Glue</strong></li>
+<li>Mất khoảng 1 phút để khởi tạo run crawler.</li>
 </ol>
-<ul>
-<li>Chọn <strong>Databases</strong></li>
-<li>Chọn <strong>costmaster</strong> database</li>
-<li>Chọn <strong>View tables</strong></li>
-</ul>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/00017-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/00018.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="18">
-<li>Chọn <strong>monthly_report</strong> table</li>
+<li>Khởi tạo <strong>run crawler</strong></li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/00018-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/00019.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 <ol start="19">
-<li>Dễ dàng nhận thấy, <strong>giá trị recordCount khác 0</strong>, điều này chứng tỏ <strong>dữ liệu dạng parquet trên S3</strong> đã được chuyển hóa thành dạng bảng thành công nhờ công cụ <strong>Crawler của AWS Glue</strong>.</li>
+<li><strong>Run crawler</strong> thành công.</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/00019-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img src="/images/2/00020.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<ol start="20">
+<li>Kiểm tra <strong>Table</strong> của AWS Glue. Ta thấy có bảng dữ liệu <strong>monthly_report</strong></li>
+</ol>
+<p><img src="/images/2/00021.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<ol start="21">
+<li>Xem chi tiết thông tin bảng dữ liệu.</li>
+</ol>
+<p><img src="/images/2/00022.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
 
 
 
@@ -949,19 +932,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1653607333"></script>
-    <script src="/js/perfect-scrollbar.min.js?1653607333"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1653607333"></script>
-    <script src="/js/jquery.sticky.js?1653607333"></script>
-    <script src="/js/featherlight.min.js?1653607333"></script>
-    <script src="/js/highlight.pack.js?1653607333"></script>
+    <script src="/js/clipboard.min.js?1674724618"></script>
+    <script src="/js/perfect-scrollbar.min.js?1674724618"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1674724618"></script>
+    <script src="/js/jquery.sticky.js?1674724618"></script>
+    <script src="/js/featherlight.min.js?1674724618"></script>
+    <script src="/js/highlight.pack.js?1674724618"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1653607333"></script>
-    <script src="/js/learn.js?1653607333"></script>
-    <script src="/js/hugo-learn.js?1653607333"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1674724618"></script>
+    <script src="/js/learn.js?1674724618"></script>
+    <script src="/js/hugo-learn.js?1674724618"></script>
 
-    <link href="/mermaid/mermaid.css?1653607333" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1653607333"></script>
+    <link href="/mermaid/mermaid.css?1674724618" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1674724618"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

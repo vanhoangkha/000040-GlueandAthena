@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Building Database on Cost and Performance Analysis with AWS Glue and Amazon Athena</title>
+    <title>Building a database on Cost and Performance Analysis with AWS Glue and Amazon Athena</title>
     <link>/2-prerequiste/2.2-builddatabase/</link>
-    <description>Recent content in Building Database on Cost and Performance Analysis with AWS Glue and Amazon Athena</description>
+    <description>Recent content in Building a database on Cost and Performance Analysis with AWS Glue and Amazon Athena</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="/2-prerequiste/2.2-builddatabase/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
