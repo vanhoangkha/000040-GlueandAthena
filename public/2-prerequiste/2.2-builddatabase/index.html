@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Building a database :: Cost and Performance Analysis with AWS Glue and Amazon Athena</title>
 
     
-    <link href="/css/nucleus.css?1701061061" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701061061" rel="stylesheet">
-    <link href="/css/hybrid.css?1701061061" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701061061" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701061061" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701061061" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701061061" rel="stylesheet">
-    <link href="/css/theme.css?1701061061" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701061061" rel="stylesheet">
+    <link href="/css/nucleus.css?1733801276" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733801276" rel="stylesheet">
+    <link href="/css/hybrid.css?1733801276" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733801276" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733801276" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733801276" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733801276" rel="stylesheet">
+    <link href="/css/theme.css?1733801276" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733801276" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701061061" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733801276" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701061061"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733801276"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701061061"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701061061"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733801276"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733801276"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701061061"></script>
+<script type="text/javascript" src="/js/search.js?1733801276"></script>
 
     
   </div>
@@ -168,7 +168,7 @@
   
     
     <li data-nav-id="/2-prerequiste/2.2-builddatabase/" title="Building a database" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -489,7 +489,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -590,7 +590,7 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/0001-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2-Prerequiste/2.2-Builddatabase/0001-builddatabase.png?featherlight=false&width=90pc"></p>
 <ol start="2">
 <li>
 <p>In the <strong>AWS Glue</strong> interface</p>
@@ -600,94 +600,94 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/2/0001.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/0001.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>Configure <strong>Crawler</strong>, enter <strong>Name</strong> as <strong><code>Cost_MasterCrawler</code></strong>. Then select <strong>Next</strong></li>
 </ol>
-<p><img src="/images/2/0002.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/0002.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>Select <strong>Add a data source</strong></li>
 </ol>
-<p><img src="/images/2/0003.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/0003.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>Configure data source</li>
 </ol>
-<p><img src="/images/2/0004.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/0004.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>Select <strong>S3 path</strong></li>
 </ol>
-<p><img src="/images/2/0005.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/0005.png?featherlight=false&width=90pc"></p>
 <ol start="7">
 <li>Complete the data source configuration.</li>
 </ol>
-<p><img src="/images/2/0006.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/0006.png?featherlight=false&width=90pc"></p>
 <ol start="8">
 <li>After configuring the data source, select <strong>Next</strong></li>
 </ol>
-<p><img src="/images/2/0007.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/0007.png?featherlight=false&width=90pc"></p>
 <ol start="9">
 <li>For security, select <strong>Create new IAM role</strong></li>
 </ol>
-<p><img src="/images/2/0008.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/0008.png?featherlight=false&width=90pc"></p>
 <ol start="10">
 <li>Enter the role name and select <strong>Create</strong></li>
 </ol>
-<p><img src="/images/2/0009.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/0009.png?featherlight=false&width=90pc"></p>
 <ol start="11">
 <li>After creating the role, select <strong>Next</strong></li>
 </ol>
-<p><img src="/images/2/00010.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00010.png?featherlight=false&width=90pc"></p>
 <ol start="12">
 <li>Implement more database</li>
 </ol>
 <ul>
 <li>Select <strong>Add database</strong></li>
 </ul>
-<p><img src="/images/2/00011.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00011.png?featherlight=false&width=90pc"></p>
 <ol start="13">
 <li>Enter the database name as <strong><code>costmaster</code></strong>. Select <strong>Create database</strong></li>
 </ol>
-<p><img src="/images/2/00012.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00012.png?featherlight=false&width=90pc"></p>
 <ol start="14">
 <li>Complete database creation.</li>
 </ol>
-<p><img src="/images/2/00013.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00013.png?featherlight=false&width=90pc"></p>
 <ol start="15">
 <li>Add database successfully and select <strong>Next</strong></li>
 </ol>
-<p><img src="/images/2/00014.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00014.png?featherlight=false&width=90pc"></p>
 <ol start="14">
 <li>Check and select <strong>Create crawler</strong></li>
 </ol>
-<p><img src="/images/2/00015.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00015.png?featherlight=false&width=90pc"></p>
 <ol start="15">
 <li>Complete crawler creation.</li>
 </ol>
-<p><img src="/images/2/00016.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00016.png?featherlight=false&width=90pc"></p>
 <ol start="16">
 <li>Select <strong>Run crawler</strong></li>
 </ol>
-<p><img src="/images/2/00017.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00017.png?featherlight=false&width=90pc"></p>
 <ol start="17">
 <li>It takes about 1 minute to initialize the run crawler.</li>
 </ol>
-<p><img src="/images/2/00018.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00018.png?featherlight=false&width=90pc"></p>
 <ol start="18">
 <li>Initialize <strong>run crawler</strong></li>
 </ol>
-<p><img src="/images/2/00019.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00019.png?featherlight=false&width=90pc"></p>
 <ol start="19">
 <li><strong>Run crawler</strong> successfully.</li>
 </ol>
-<p><img src="/images/2/00020.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00020.png?featherlight=false&width=90pc"></p>
 <ol start="20">
 <li>Check out the AWS Glue <strong>Table</strong>. We see a data table <strong>monthly_report</strong></li>
 </ol>
-<p><img src="/images/2/00021.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00021.png?featherlight=false&width=90pc"></p>
 <ol start="21">
 <li>View detailed data sheet information.</li>
 </ol>
-<p><img src="/images/2/00022.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00022.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -936,19 +936,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701061061"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701061061"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701061061"></script>
-    <script src="/js/jquery.sticky.js?1701061061"></script>
-    <script src="/js/featherlight.min.js?1701061061"></script>
-    <script src="/js/highlight.pack.js?1701061061"></script>
+    <script src="/js/clipboard.min.js?1733801276"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733801276"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733801276"></script>
+    <script src="/js/jquery.sticky.js?1733801276"></script>
+    <script src="/js/featherlight.min.js?1733801276"></script>
+    <script src="/js/highlight.pack.js?1733801276"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701061061"></script>
-    <script src="/js/learn.js?1701061061"></script>
-    <script src="/js/hugo-learn.js?1701061061"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733801276"></script>
+    <script src="/js/learn.js?1733801276"></script>
+    <script src="/js/hugo-learn.js?1733801276"></script>
 
-    <link href="/mermaid/mermaid.css?1701061061" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701061061"></script>
+    <link href="/mermaid/mermaid.css?1733801276" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733801276"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

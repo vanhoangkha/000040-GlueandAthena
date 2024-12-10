@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Xây dựng cơ sở dữ liệu :: Phân tích chi phí và hiệu năng sử dụng với AWS Glue và Amazon Athena</title>
 
     
-    <link href="/css/nucleus.css?1701061062" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701061062" rel="stylesheet">
-    <link href="/css/hybrid.css?1701061062" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701061062" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701061062" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701061062" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701061062" rel="stylesheet">
-    <link href="/css/theme.css?1701061062" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701061062" rel="stylesheet">
+    <link href="/css/nucleus.css?1733801276" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733801276" rel="stylesheet">
+    <link href="/css/hybrid.css?1733801276" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733801276" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733801276" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733801276" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733801276" rel="stylesheet">
+    <link href="/css/theme.css?1733801276" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733801276" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701061062" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733801276" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701061062"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733801276"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701061062"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701061062"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733801276"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733801276"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701061062"></script>
+<script type="text/javascript" src="/js/search.js?1733801276"></script>
 
     
   </div>
@@ -168,7 +168,7 @@
   
     
     <li data-nav-id="/vi/2-prerequiste/2.2-builddatabase/" title="Xây dựng cơ sở dữ liệu" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -489,7 +489,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -590,7 +590,7 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.2-Builddatabase/0001-builddatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2-Prerequiste/2.2-Builddatabase/0001-builddatabase.png?featherlight=false&width=90pc"></p>
 <ol start="2">
 <li>
 <p>Trong giao diện <strong>AWS Glue</strong></p>
@@ -600,94 +600,94 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/2/0001.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/0001.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>Cấu hình <strong>Crawler</strong>, nhập <strong>Name</strong> là <strong><code>Cost_MasterCrawler</code></strong>. Sau đó, chọn <strong>Next</strong></li>
 </ol>
-<p><img src="/images/2/0002.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/0002.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>Chọn  <strong>Add a data source</strong></li>
 </ol>
-<p><img src="/images/2/0003.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/0003.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>Cấu hình data source</li>
 </ol>
-<p><img src="/images/2/0004.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/0004.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>Chọn <strong>S3 path</strong></li>
 </ol>
-<p><img src="/images/2/0005.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/0005.png?featherlight=false&width=90pc"></p>
 <ol start="7">
 <li>Hoàn tất cấu hình data source.</li>
 </ol>
-<p><img src="/images/2/0006.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/0006.png?featherlight=false&width=90pc"></p>
 <ol start="8">
 <li>Sau khi cấu hình data source, chọn <strong>Next</strong></li>
 </ol>
-<p><img src="/images/2/0007.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/0007.png?featherlight=false&width=90pc"></p>
 <ol start="9">
 <li>Đối với security, bạn chọn <strong>Create new IAM role</strong></li>
 </ol>
-<p><img src="/images/2/0008.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/0008.png?featherlight=false&width=90pc"></p>
 <ol start="10">
 <li>Nhập tên role và chọn <strong>Create</strong></li>
 </ol>
-<p><img src="/images/2/0009.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/0009.png?featherlight=false&width=90pc"></p>
 <ol start="11">
 <li>Sau khi tạo role, chọn <strong>Next</strong></li>
 </ol>
-<p><img src="/images/2/00010.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00010.png?featherlight=false&width=90pc"></p>
 <ol start="12">
 <li>Thực hiện thêm database</li>
 </ol>
 <ul>
 <li>Chọn <strong>Add database</strong></li>
 </ul>
-<p><img src="/images/2/00011.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00011.png?featherlight=false&width=90pc"></p>
 <ol start="13">
 <li>Nhập tên database là <strong><code>costmaster</code></strong>. Chọn <strong>Create database</strong></li>
 </ol>
-<p><img src="/images/2/00012.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00012.png?featherlight=false&width=90pc"></p>
 <ol start="14">
 <li>Hoàn thành tạo database.</li>
 </ol>
-<p><img src="/images/2/00013.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00013.png?featherlight=false&width=90pc"></p>
 <ol start="15">
 <li>Thêm database thành công và chọn <strong>Next</strong></li>
 </ol>
-<p><img src="/images/2/00014.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00014.png?featherlight=false&width=90pc"></p>
 <ol start="14">
 <li>Kiểm tra và chọn <strong>Create crawler</strong></li>
 </ol>
-<p><img src="/images/2/00015.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00015.png?featherlight=false&width=90pc"></p>
 <ol start="15">
 <li>Hoàn thành tạo crawler.</li>
 </ol>
-<p><img src="/images/2/00016.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00016.png?featherlight=false&width=90pc"></p>
 <ol start="16">
 <li>Chọn <strong>Run crawler</strong></li>
 </ol>
-<p><img src="/images/2/00017.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00017.png?featherlight=false&width=90pc"></p>
 <ol start="17">
 <li>Mất khoảng 1 phút để khởi tạo run crawler.</li>
 </ol>
-<p><img src="/images/2/00018.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00018.png?featherlight=false&width=90pc"></p>
 <ol start="18">
 <li>Khởi tạo <strong>run crawler</strong></li>
 </ol>
-<p><img src="/images/2/00019.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00019.png?featherlight=false&width=90pc"></p>
 <ol start="19">
 <li><strong>Run crawler</strong> thành công.</li>
 </ol>
-<p><img src="/images/2/00020.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00020.png?featherlight=false&width=90pc"></p>
 <ol start="20">
 <li>Kiểm tra <strong>Table</strong> của AWS Glue. Ta thấy có bảng dữ liệu <strong>monthly_report</strong></li>
 </ol>
-<p><img src="/images/2/00021.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00021.png?featherlight=false&width=90pc"></p>
 <ol start="21">
 <li>Xem chi tiết thông tin bảng dữ liệu.</li>
 </ol>
-<p><img src="/images/2/00022.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2/00022.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -936,19 +936,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701061062"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701061062"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701061062"></script>
-    <script src="/js/jquery.sticky.js?1701061062"></script>
-    <script src="/js/featherlight.min.js?1701061062"></script>
-    <script src="/js/highlight.pack.js?1701061062"></script>
+    <script src="/js/clipboard.min.js?1733801276"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733801276"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733801276"></script>
+    <script src="/js/jquery.sticky.js?1733801276"></script>
+    <script src="/js/featherlight.min.js?1733801276"></script>
+    <script src="/js/highlight.pack.js?1733801276"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701061062"></script>
-    <script src="/js/learn.js?1701061062"></script>
-    <script src="/js/hugo-learn.js?1701061062"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733801276"></script>
+    <script src="/js/learn.js?1733801276"></script>
+    <script src="/js/hugo-learn.js?1733801276"></script>
 
-    <link href="/mermaid/mermaid.css?1701061062" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701061062"></script>
+    <link href="/mermaid/mermaid.css?1733801276" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733801276"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

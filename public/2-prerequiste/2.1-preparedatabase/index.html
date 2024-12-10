@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Preparing the database :: Cost and Performance Analysis with AWS Glue and Amazon Athena</title>
 
     
-    <link href="/css/nucleus.css?1701061061" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701061061" rel="stylesheet">
-    <link href="/css/hybrid.css?1701061061" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701061061" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701061061" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701061061" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701061061" rel="stylesheet">
-    <link href="/css/theme.css?1701061061" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701061061" rel="stylesheet">
+    <link href="/css/nucleus.css?1733801276" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733801276" rel="stylesheet">
+    <link href="/css/hybrid.css?1733801276" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733801276" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733801276" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733801276" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733801276" rel="stylesheet">
+    <link href="/css/theme.css?1733801276" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733801276" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701061061" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733801276" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701061061"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733801276"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701061061"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701061061"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733801276"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733801276"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701061061"></script>
+<script type="text/javascript" src="/js/search.js?1733801276"></script>
 
     
   </div>
@@ -140,7 +140,7 @@
   
     
     <li data-nav-id="/2-prerequiste/2.1-preparedatabase/" title="Preparing the database" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -489,7 +489,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -581,7 +581,7 @@
 	<p>In this lab, we use available data about <strong>AWS Cost &amp; Usage Report.</strong></p>
 <p>The first step, to build a database for query purposes from <strong>Amazon Athena</strong> through <strong>AWS Glue</strong>, we need to have data based on <strong>AWS Cost &amp; Usage Report</strong>. However, getting this report will <strong>take at least 24h</strong>, so we have prepared the report files.</p>
 
-<div class="notices note" ><p>You can download the data at <a href="https://github.com/First-Cloud-Journey/000040-CUR">Cost and Usage Analysis</a>. <img src="/images/2-Prerequiste/2.1-Preparedatabase/00012-preparedatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<div class="notices note" ><p>You can download the data at <a href="https://github.com/First-Cloud-Journey/000040-CUR">Cost and Usage Analysis</a>. <img alt="Prerequisite" src="/images/2-Prerequiste/2.1-Preparedatabase/00012-preparedatabase.png?featherlight=false&width=90pc"></p>
 </div>
 
 <ol>
@@ -591,7 +591,7 @@
 <li>Find <strong>S3</strong></li>
 <li>Select <strong>S3</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-Preparedatabase/0001-preparedatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2-Prerequiste/2.1-Preparedatabase/0001-preparedatabase.png?featherlight=false&width=90pc"></p>
 <ol start="2">
 <li>In the <strong>S3</strong> interface</li>
 </ol>
@@ -599,32 +599,32 @@
 <li>Select <strong>Buckets</strong></li>
 <li>Select <strong>Create bucket</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-Preparedatabase/0002-preparedatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2-Prerequiste/2.1-Preparedatabase/0002-preparedatabase.png?featherlight=false&width=90pc"></p>
 <ol>
 <li>In the <strong>Create bucket</strong> interface</li>
 </ol>
 <ul>
 <li><strong>Bucket name</strong>, enter <code>cost-and-usage-analysis</code></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-Preparedatabase/0003-preparedatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2-Prerequiste/2.1-Preparedatabase/0003-preparedatabase.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>Select <strong>Create bucket</strong></li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-Preparedatabase/0004-preparedatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2-Prerequiste/2.1-Preparedatabase/0004-preparedatabase.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>Finish creating <strong>S3 bucket</strong></li>
 </ol>
 <ul>
 <li>Select <strong>cost-and-usage-analysis</strong> bucket</li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-Preparedatabase/0005-preparedatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2-Prerequiste/2.1-Preparedatabase/0005-preparedatabase.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>In <strong>cost-and-usage-analysis</strong> bucket</li>
 </ol>
 <ul>
 <li>Create a folder to store data by selecting <strong>Create folder</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-Preparedatabase/0006-preparedatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2-Prerequiste/2.1-Preparedatabase/0006-preparedatabase.png?featherlight=false&width=90pc"></p>
 <ol start="7">
 <li>In the <strong>Create folder</strong> interface</li>
 </ol>
@@ -632,11 +632,11 @@
 <li><strong>Folder name</strong>, enter <code>Monthly-Report</code></li>
 <li>Select <strong>Create folder</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-Preparedatabase/0007-preparedatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2-Prerequiste/2.1-Preparedatabase/0007-preparedatabase.png?featherlight=false&width=90pc"></p>
 <ol start="8">
 <li>We perform <strong>Upload</strong> of data files</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-Preparedatabase/0008-preparedatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2-Prerequiste/2.1-Preparedatabase/0008-preparedatabase.png?featherlight=false&width=90pc"></p>
 <ol start="9">
 <li>Select downloaded data files</li>
 </ol>
@@ -644,15 +644,15 @@
 <li>Select <strong>Add files</strong></li>
 <li>Select data files</li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-Preparedatabase/0009-preparedatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2-Prerequiste/2.1-Preparedatabase/0009-preparedatabase.png?featherlight=false&width=90pc"></p>
 <ol start="10">
 <li>Select <strong>Upload</strong></li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-Preparedatabase/00010-preparedatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2-Prerequiste/2.1-Preparedatabase/00010-preparedatabase.png?featherlight=false&width=90pc"></p>
 <ol start="11">
 <li>When uploading status changes to <strong>Succeeded</strong></li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-Preparedatabase/00011-preparedatabase.png?featherlight=false&amp;width=90pc" alt="Prerequisite"></p>
+<p><img alt="Prerequisite" src="/images/2-Prerequiste/2.1-Preparedatabase/00011-preparedatabase.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -898,19 +898,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701061061"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701061061"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701061061"></script>
-    <script src="/js/jquery.sticky.js?1701061061"></script>
-    <script src="/js/featherlight.min.js?1701061061"></script>
-    <script src="/js/highlight.pack.js?1701061061"></script>
+    <script src="/js/clipboard.min.js?1733801276"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733801276"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733801276"></script>
+    <script src="/js/jquery.sticky.js?1733801276"></script>
+    <script src="/js/featherlight.min.js?1733801276"></script>
+    <script src="/js/highlight.pack.js?1733801276"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701061061"></script>
-    <script src="/js/learn.js?1701061061"></script>
-    <script src="/js/hugo-learn.js?1701061061"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733801276"></script>
+    <script src="/js/learn.js?1733801276"></script>
+    <script src="/js/hugo-learn.js?1733801276"></script>
 
-    <link href="/mermaid/mermaid.css?1701061061" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701061061"></script>
+    <link href="/mermaid/mermaid.css?1733801276" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733801276"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

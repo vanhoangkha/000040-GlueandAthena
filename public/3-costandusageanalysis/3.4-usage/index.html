@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Usage :: Cost and Performance Analysis with AWS Glue and Amazon Athena</title>
 
     
-    <link href="/css/nucleus.css?1701061061" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701061061" rel="stylesheet">
-    <link href="/css/hybrid.css?1701061061" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701061061" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701061061" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701061061" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701061061" rel="stylesheet">
-    <link href="/css/theme.css?1701061061" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701061061" rel="stylesheet">
+    <link href="/css/nucleus.css?1733801276" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733801276" rel="stylesheet">
+    <link href="/css/hybrid.css?1733801276" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733801276" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733801276" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733801276" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733801276" rel="stylesheet">
+    <link href="/css/theme.css?1733801276" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733801276" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701061061" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733801276" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701061061"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733801276"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701061061"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701061061"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733801276"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733801276"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701061061"></script>
+<script type="text/javascript" src="/js/search.js?1733801276"></script>
 
     
   </div>
@@ -346,7 +346,7 @@
   
     
     <li data-nav-id="/3-costandusageanalysis/3.4-usage/" title="Usage" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -489,7 +489,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -615,11 +615,11 @@ GROUP BY &#34;bill_payer_account_id&#34;,
 &#34;line_item_line_item_description&#34;,
 &#34;pricing_public_on_demand_rate&#34;
 LIMIT 20
-</code></pre><p><img src="/images/3-Costandusageanalysis/3.4-Usage/0001-usage.png?featherlight=false&amp;width=90pc" alt="Uasge"></p>
+</code></pre><p><img alt="Uasge" src="/images/3-Costandusageanalysis/3.4-Usage/0001-usage.png?featherlight=false&width=90pc"></p>
 <ol start="2">
 <li>Query results returned</li>
 </ol>
-<p><img src="/images/3-Costandusageanalysis/3.4-Usage/0002-usage.png?featherlight=false&amp;width=90pc" alt="Uasge"></p>
+<p><img alt="Uasge" src="/images/3-Costandusageanalysis/3.4-Usage/0002-usage.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>Display <strong>cost for each usage type of family t2</strong></li>
 </ol>
@@ -631,11 +631,11 @@ WHERE &#34;line_item_usage_type&#34; like &#39;%t2.%&#39;
 GROUP BY &#34;line_item_usage_type&#34;
 ORDER BY &#34;line_item_usage_type&#34;
 LIMIT 20
-</code></pre><p><img src="/images/3-Costandusageanalysis/3.4-Usage/0003-usage.png?featherlight=false&amp;width=90pc" alt="Uasge"></p>
+</code></pre><p><img alt="Uasge" src="/images/3-Costandusageanalysis/3.4-Usage/0003-usage.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>Query results returned</li>
 </ol>
-<p><img src="/images/3-Costandusageanalysis/3.4-Usage/0004-usage.png?featherlight=false&amp;width=90pc" alt="Uasge"></p>
+<p><img alt="Uasge" src="/images/3-Costandusageanalysis/3.4-Usage/0004-usage.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>Display <strong>hourly cost for each usage type</strong></li>
 </ol>
@@ -654,11 +654,11 @@ and &#34;line_item_usage_type&#34; like &#39;%Usage%&#39;
 GROUP BY &#34;line_item_usage_type&#34;
 ORDER BY &#34;line_item_usage_type&#34;
 LIMIT 20
-</code></pre><p><img src="/images/3-Costandusageanalysis/3.4-Usage/0005-usage.png?featherlight=false&amp;width=90pc" alt="Uasge"></p>
+</code></pre><p><img alt="Uasge" src="/images/3-Costandusageanalysis/3.4-Usage/0005-usage.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>Query results returned</li>
 </ol>
-<p><img src="/images/3-Costandusageanalysis/3.4-Usage/0006-usage.png?featherlight=false&amp;width=90pc" alt="Uasge"></p>
+<p><img alt="Uasge" src="/images/3-Costandusageanalysis/3.4-Usage/0006-usage.png?featherlight=false&width=90pc"></p>
 <ol start="7">
 <li>Display <strong>Number of Reserved Instances that have not been used</strong></li>
 </ol>
@@ -674,11 +674,11 @@ and reservation_unused_quantity &gt; 0
 ORDER BY bill_billing_period_start_date,
 reservation_unused_recurring_fee desc
 LIMIT 20
-</code></pre><p><img src="/images/3-Costandusageanalysis/3.4-Usage/0007-usage.png?featherlight=false&amp;width=90pc" alt="Uasge"></p>
+</code></pre><p><img alt="Uasge" src="/images/3-Costandusageanalysis/3.4-Usage/0007-usage.png?featherlight=false&width=90pc"></p>
 <ol start="8">
 <li>Query results returned</li>
 </ol>
-<p><img src="/images/3-Costandusageanalysis/3.4-Usage/0008-usage.png?featherlight=false&amp;width=90pc" alt="Uasge"></p>
+<p><img alt="Uasge" src="/images/3-Costandusageanalysis/3.4-Usage/0008-usage.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -927,19 +927,19 @@ LIMIT 20
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701061061"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701061061"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701061061"></script>
-    <script src="/js/jquery.sticky.js?1701061061"></script>
-    <script src="/js/featherlight.min.js?1701061061"></script>
-    <script src="/js/highlight.pack.js?1701061061"></script>
+    <script src="/js/clipboard.min.js?1733801276"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733801276"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733801276"></script>
+    <script src="/js/jquery.sticky.js?1733801276"></script>
+    <script src="/js/featherlight.min.js?1733801276"></script>
+    <script src="/js/highlight.pack.js?1733801276"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701061061"></script>
-    <script src="/js/learn.js?1701061061"></script>
-    <script src="/js/hugo-learn.js?1701061061"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733801276"></script>
+    <script src="/js/learn.js?1733801276"></script>
+    <script src="/js/hugo-learn.js?1733801276"></script>
 
-    <link href="/mermaid/mermaid.css?1701061061" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701061061"></script>
+    <link href="/mermaid/mermaid.css?1733801276" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733801276"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
